@@ -8,9 +8,11 @@ class MenuItemSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+
 class RestaurantSerializer(serializers.ModelSerializer):
     menu = MenuItemSerializer(many=True, read_only=True)
 
     class Meta:
         model = Restaurant
         fields = "__all__"
+
